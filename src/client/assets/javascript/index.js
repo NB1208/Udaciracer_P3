@@ -88,7 +88,6 @@ async function delay(ms) {
 
 // This async function controls the flow of the race, add the logic and error handling
 async function handleCreateRace() {
-    console.log('skdhbfksdfjkggswdf');
     // render starting UI
 
     await apiReady;
@@ -107,8 +106,6 @@ async function handleCreateRace() {
     }
 
     const track = store.tracks.filter((i) => i.id === +track_id)[0];
-
-    console.log(track);
 
     renderAt('#race', renderRaceStartView(track));
 
@@ -138,7 +135,6 @@ function runRace(raceID) {
             if(!res) {
                 return;
             }
-            console.log(res);
             if (res.status == 'in-progress') {
                 renderAt('#leaderBoard', raceProgress(res.positions));
             }
