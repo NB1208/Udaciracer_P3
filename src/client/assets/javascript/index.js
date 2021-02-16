@@ -453,7 +453,5 @@ async function accelerate(id) {
             ...defaultFetchOpts(),
         });
         return await response.json();
-    } catch (error) {
-        console.log('accelerate error', error);
-    }
+    } catch (error){}
 }
