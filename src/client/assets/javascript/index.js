@@ -226,7 +226,7 @@ function handleAccelerate() {
     console.log('accelerate button clicked');
 
     // Invoke the API call to accelerate
-    return accelerate(store.player_id);
+    return accelerate(store.race_id - 1);
 }
 
 // HTML VIEWS ------------------------------------------------
